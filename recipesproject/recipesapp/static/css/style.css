@@ -13,12 +13,14 @@ nav {
   background-color: #333;
   color: #fff;
   padding: 10px;
+  display: flex;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
   margin-right: 10px;
+  margin-top: 10px;
 }
 
 main {
@@ -52,4 +54,21 @@ button {
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.exit {
+  margin-left: auto;
+}
+
+.exit button {
+  background-color: #993300;
+  color: #fff;
+}
+
+.exit button:hover {
+  background-color: #cc6600;
 }

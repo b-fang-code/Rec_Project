@@ -11,9 +11,9 @@
     <a href="{% url 'recipes:all_recipes' %}">Все рецепты</a>
     {% if user.is_authenticated %}
       <a href="{% url 'recipes:recipe_add' %}">Добавить рецепт</a>
-      <form action="{% url 'recipes:logout' %}" method="post">
+      <form class="exit" action="{% url 'recipes:logout' %}" method="post">
         {% csrf_token %}
-        <button type="submit">Выйти</button>
+        <button class="exitbutton" type="submit">Выйти</button>
       </form>
     {% else %}
       <a href="{% url 'recipes:login' %}">Войти</a>
