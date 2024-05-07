@@ -1,0 +1,14 @@
+{% extends 'recipesapp/base.html' %}
+
+{% block content %}
+  {% if form.instance.id %}
+  <h2>Редактировать рецепт</h2>
+{% else %}
+  <h2>Добавить рецепт</h2>
+{% endif %}
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Сохранить</button>
+</form>
+{% endblock %}
