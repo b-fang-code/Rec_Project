@@ -32,7 +32,7 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=user.username, password=raw_password)
             login(request, user)
-            return redirect('home')
+            return redirect('recipes:home')
     else:
         form = SingUpForm()
     return render(request, 'recipesapp/signup.html', {'form': form})

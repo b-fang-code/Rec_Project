@@ -3,72 +3,148 @@
     margin: 0;
     padding: 0;
 }
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/main bg.jpg');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
+
 nav {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  display: flex;
+    height: 150px;
+    background-image: url('../img/nav bag.jpg');
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: top;
+    justify-content: start;
+    margin-bottom: 20px;
+    border: 5px solid #cc6600;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 10px;
-  margin-top: 10px;
+    color: #fff;
+    height: 16px;
+    justify-content: flex-start;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+
+nav a:hover {
+    color: #d0ff42;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0;
+    font-weight: bold;
+    align-items: end;
 }
 
 main {
-  padding: 20px;
+    padding: 20px;
 }
 
-h1, h2 {
-  color: #333;
+h1, h2, p {
+    color: #fff;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 form {
-  max-width: 500px;
+    max-width: 500px;
 }
 
 form p {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
 .exit {
-  margin-left: auto;
+    margin-left: auto;
 }
 
 .exit button {
-  background-color: #993300;
-  color: #fff;
+    display: flex;
+    align-items: end;
+    margin-left: auto;
+    justify-content: end;
+    background-color: #993300;
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
 .exit button:hover {
-  background-color: #cc6600;
+    background-color: #cc6600;
+}
+
+.welcome {
+    text-align: center;
+}
+
+.recipes {
+    display: grid;
+    text-align: center;
+}
+
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.recipe-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.recipe-image {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 5px solid #cc6600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.recipe-link {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.recipe-link:hover {
+    color: #d0ff42;
+}
+
+.link-other {
+    color: #d0ff42;
+    transition: color 0.3s ease;
 }

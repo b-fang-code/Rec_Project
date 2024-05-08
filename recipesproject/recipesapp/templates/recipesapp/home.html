@@ -1,29 +1,40 @@
 {% extends 'recipesapp/base.html' %}
 
 {% block content %}
-<h1>Добро пожаловать на Кулинарный энтузиаст!</h1>
-<p>Здесь вы можете делиться своими любимыми рецептами и открывать для себя новые кулинарные шедевры от других
-    поваров-энтузиастов!</p>
+<div class="welcome">
+    <h1>Добро пожаловать на Кулинарный энтузиаст!</h1>
+    <p>Здесь вы можете делиться своими любимыми рецептами и открывать для себя новые кулинарные шедевры от других
+        поваров-энтузиастов!</p>
 
-<p>Присоединяйтесь к нашему сообществу и окунитесь в мир вкусной и полезной еды. Регистрируйтесь, чтобы добавлять свои
-    рецепты и оценивать рецепты других пользователей.</p>
+    <p>Присоединяйтесь к нашему сообществу и окунитесь в мир вкусной и полезной еды. Регистрируйтесь, чтобы добавлять
+        свои
+        рецепты и оценивать рецепты других пользователей.</p>
 
-<p>Не упустите возможность поделиться своими кулинарными секретами и узнать новые идеи для вдохновения на кухне!</p>
+    <p>Не упустите возможность поделиться своими кулинарными секретами и узнать новые идеи для вдохновения на кухне!</p>
 
-{% if user.is_authenticated %}
-<p>Рады снова видеть вас, {{ user.username }}! <a href="{% url 'recipes:recipe_add' %}">Добавить новый рецепт</a></p>
-{% else %}
-<p><a href="{% url 'recipes:signup' %}">Зарегистрируйтесь</a> или <a href="{% url 'recipes:login' %}">войдите</a>, чтобы
-    начать!</p>
-{% endif %}
-
-<h2>Рецепты наших поваров</h2>
-<ul>
-    {% for recipe in random_recipes %}
-    <li><a href="{% url 'recipes:recipe_detail' recipe.id %}">{{ recipe.title }}</a></li>
-    {% if recipe.image %}
-    <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" width="200">
+    {% if user.is_authenticated %}
+    <p>Рады снова видеть вас, {{ user.username }}! <a class="link-other" href="{% url 'recipes:recipe_add' %}">Добавить
+        новый рецепт</a>
+    </p>
+    {% else %}
+    <p><a class="link-other" href="{% url 'recipes:signup' %}">Зарегистрируйтесь</a> или
+        <a class="link-other" href="{% url 'recipes:login' %}">войдите</a>,
+        чтобы
+        начать!</p>
     {% endif %}
-    {% endfor %}
-</ul>
-{% endblock %}
+</div>
+
+<div class="recipes">
+    <h2>Рецепты наших энтузиастов</h2>
+    <div class="recipe-list">
+        <ul>
+            {% for recipe in random_recipes %}
+            <li><a class="recipe-link" href="{% url 'recipes:recipe_detail' recipe.id %}">{{ recipe.title }}</a></li>
+            {% if recipe.image %}
+            <img class="recipe-image" src="{{ recipe.image.url }}" alt="{{ recipe.title }}" width="300">
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% endblock %}
+</div>
