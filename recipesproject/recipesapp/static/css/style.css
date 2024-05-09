@@ -44,7 +44,6 @@ nav a:hover {
 
 .logo-link {
     font-family: 'Briem Hand', cursive;
-    font-family: ;
     color: #fff; ;
     margin-right: 30px;
     display: flex;
@@ -165,7 +164,6 @@ button:hover {
     background-image: url('../img/nav bag.jpg');
     color: #fff;
     padding: 10px;
-    align-items: top;
     justify-content: start;
     margin-bottom: 20px;
     border: 5px solid #cc6600;
