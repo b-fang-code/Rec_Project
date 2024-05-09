@@ -23,9 +23,7 @@ nav {
     color: #fff;
     padding: 10px;
     display: flex;
-    align-items: top;
     justify-content: start;
-    margin-bottom: 20px;
     border: 5px solid #cc6600;
 }
 
@@ -44,12 +42,20 @@ nav a:hover {
     color: #d0ff42;
 }
 
-.logo {
+.logo-link {
+    font-family: 'Briem Hand', cursive;
+    font-family: ;
+    color: #fff; ;
+    margin-right: 30px;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 0;
+    justify-content: center;
+    font-size: 50px;
     font-weight: bold;
-    align-items: end;
+    transition: color 0.3s ease;
+}
+
+.logo-link:hover {
+    color: #d0ff42;
 }
 
 main {
@@ -153,12 +159,12 @@ button:hover {
 }
 
 .footer {
+    position: relative;
     display: flex;
-    height: 50px;
+    height: 70px;
     background-image: url('../img/nav bag.jpg');
     color: #fff;
     padding: 10px;
-    display: flex;
     align-items: top;
     justify-content: start;
     margin-bottom: 20px;

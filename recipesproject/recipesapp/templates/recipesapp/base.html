@@ -12,10 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/203e1df193.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Dancing+Script:wght@400..700&family=Roboto+Slab:wght@100..900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
+          rel="stylesheet">
 </head>
 <body class="container">
 <header class="header">
     <nav>
+        <div class="logo"><a class="logo-link" href="{% url 'recipes:home' %}">Кулинарный энтузиаст</a>
+        </div>
         <a href="{% url 'recipes:home' %}">Главная</a>
         <a href="{% url 'recipes:all_recipes' %}">Все рецепты</a>
         {% if user.is_authenticated %}
@@ -36,8 +42,8 @@
 </main>
 <footer class="footer">
     <p>&copy; 2024 Кулинарный энтузиаст. Все права защищены. Контакты: </p>
-    <a class="telegram" href="https://t.me/Dobrya4_ok"><i class="fa-brands fa-telegram"></i></a>
-    <a class="vk" href="https://vk.com/dobrya4__ok"><i class="fa-brands fa-vk"></i></a>
+    <a class="telegram " href="https://t.me/Dobrya4_ok"><i class="fa-brands fa-telegram"></i></a>
+    <a class="vk footer-link" href="https://vk.com/dobrya4__ok"><i class="fa-brands fa-vk"></i></a>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
