@@ -10,7 +10,7 @@
 <p><strong>Ингредиенты:</strong> {{ recipe.ingredients }}</p>
 <p><strong>Инструкция приготовления:</strong> {{ recipe.instructions }}</p>
 <p><strong>Время приготовления:</strong> {{ recipe.prep_time }} минут</p>
-<p><strong>Категории:</strong> {% for category in recipe.categories.all %}{{ category.name }}
+<p><strong>Категория:</strong> {% for category in recipe.categories.all %}{{ category.name }}
     {% endfor %}</p>
 {% if request.user == recipe.author %}
 <a class="link-other" href="{% url 'recipes:recipe_edit' recipe.id %}">Редактировать</a>
