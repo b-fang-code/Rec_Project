@@ -153,6 +153,7 @@ button:hover {
 }
 
 .footer {
+    display: flex;
     height: 50px;
     background-image: url('../img/nav bag.jpg');
     color: #fff;
@@ -163,4 +164,26 @@ button:hover {
     margin-bottom: 20px;
     border: 5px solid #cc6600;
     bottom: 0;
+}
+
+.telegram {
+    color: cadetblue;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+    font-size: 20px;
+}
+
+.telegram:hover {
+    color: #d0ff42;
+}
+
+.vk {
+    color: cadetblue;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+    font-size: 20px;
+}
+
+.vk:hover {
+    color: #d0ff42;
 }
