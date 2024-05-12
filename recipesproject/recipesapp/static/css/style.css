@@ -20,6 +20,7 @@ body {
 nav {
     height: 150px;
     background-image: url('../img/nav bag.jpg');
+    flex-wrap: wrap;
     color: #fff;
     padding: 10px;
     display: flex;
